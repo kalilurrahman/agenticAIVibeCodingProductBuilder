@@ -1,0 +1,14 @@
+graph TD
+    A[User] -->|Topic, Tone, Count| B[Frontend (React + Vite)]
+    B -->|POST /generate-content| C[Backend (FastAPI)]
+    C -->|Mock LLM| D[Generated Slides]
+    D -->|JSON Response| B
+    B -->|Preview & Edit| A
+    A -->|Edit Text/Regenerate Image| B
+    B -->|POST /generate-image| C
+    C -->|Mock Image Gen| E[Image URL]
+    E -->|JSON Response| B
+    A -->|Export PDF| B
+    B -->|POST /export-pdf| C
+    C -->|ReportLab| F[PDF File]
+    F -->|Download| A
