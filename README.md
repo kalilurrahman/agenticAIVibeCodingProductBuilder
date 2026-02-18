@@ -31,8 +31,8 @@ Vibe Coding Carousel is an AI-powered tool designed to generate professional car
 
 ```mermaid
 graph TD
-    A[User] -->|Topic, Tone, Count| B[Frontend]
-    B -->|POST /generate-content| C[Backend]
+    A[User] -->|Topic, Tone, Count| B[Frontend - React + Vite]
+    B -->|POST /generate-content| C[Backend - FastAPI]
     C -->|Mock LLM| D[Generated Slides]
     D -->|JSON Response| B
     B -->|Preview & Edit| A
